@@ -21,7 +21,7 @@ states <- read.csv(fname)
 # subsetting for desired columns
 desired <- c(1, 4, 5, 6, 7, 8, 10:12, 15, 22:27, 30:33, 35, 36, 38, 39, 46:53,
               58, 61, 98,99,101,105:108, 119, 120, 122:125, 128,
-             167, 182:188, 195, 199, 200, 206)
+             167, 187:188, 195, 199, 200, 201,202,203,206)
 
 states <- states[,desired ]
 
@@ -36,7 +36,7 @@ cats$category[cats$num %in% c(30,33,35,36)] <- "living.costs"
 cats$category[cats$num %in% c(47,48,49,50,51,52,53,58,61)] <- "law.enforcement"
 cats$category[cats$num %in% c(98,99,101,105,106,107,108)] <- "health"
 cats$category[cats$num %in% c(46,119,120,122,123,124,125,128,167,187,188,195)] <- "politics"
-cats$category[cats$num %in% c(182,183,184,185,186,206)] <- "climate"
+cats$category[cats$num %in% c(201,202,203,206)] <- "climate"
 
 names(states)[1] <- "State"
 #rounding to 2 decimal places
@@ -55,9 +55,9 @@ stchar$Median.House.Cost <- paste0("$",stchar$Median.House.Cost)
 stchar$Average.Electric.Bill <- paste0("$",stchar$Average.Electric.Bill,"/month")
 stchar$Groceries.Montly <- paste0("$",stchar$Groceries.Montly)
 stchar$Average.Gas.Price <- paste0('$',stchar$Average.Gas.Price)
-stchar$Average.Temperature <- paste0(stchar$Average.Temperature, "U+00B0", " F")
+stchar$Average.Temperature <- paste0(stchar$Average.Temperature, "\u00B0", "F")
 #states[51,] <- c(t(cats$category))
-
+# adding labels 
 cats$label <- c("state","population","population change between 2010 and 2020",
                  "population density", "number of billionaires", "minimum wage",
 "median monthly wage","median annual income", "median hourly wage","gender pay gap",
@@ -73,10 +73,9 @@ cats$label <- c("state","population","population change between 2010 and 2020",
 "suicide deaths in 2020","infant mortality rate in 2019", "maternal mortality per 100k",
 "abortion legality","abortion after roe and casey", "cultural diversity ranking (1-50)", 
 "trans safety ranking (1-50)","LGBTQ safety ranking (1-50)","gender affirming medicaid",
-"firearm registration", "recreational marijuana","extreme heat","drought","wildfires",
-"inland flooding","coastal flooding","food insecure adults", "food insecure children",
-"poverty rate", "home vacancy rate", "corporate ownership vs. vacancy rate", 
-"average temperature")
+"firearm registration", "recreational marijuana", "food insecure adults", "food insecure children",
+"poverty rate", "home vacancy rate", "corporate ownership vs. vacancy rate", "air quality",
+"water quality", 'average humidity',"average temperature")
 
 
 # getting state boundaries
