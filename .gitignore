@@ -4,3 +4,7 @@ test22.R
 stateboundaries
 *.csv
 .Rhistory
+statefacts/rsconnect/
+statefacts/states/
+statefacts/stateboundaries
+statefacts/statesdata.csv
