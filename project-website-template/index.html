@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>State Facts!</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <!-------------------------------------------------------------------------------------------->
+    <!--Start Header-->
+    <div class="banner" style="background: url('img/map.png') no-repeat center; background-size: cover; height: 300px;"></div>
+    <div class="banner">
+      <div class="banner-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin-large text-center"> <background color=#a973ad><font size="40px"><b>State Facts!</b></font></h2>
+           <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Header-->
+    <!-------------------------------------------------------------------------------------------->
+    <div class="content">
+      <div class="content-table flex-column">
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Intro-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <p class="text add-top-margin">
+              As part of HackDavis 2023, we created an interactive map that states the facts about different states in the USA! 
+              Our goal is to provide the general public with transparent information about the United States, so that you
+              (yes you!) can be a more educated and informed citizen of the world. Whether you'd like
+              to know the median income in California, the average monthly cost of groceries in Texas, or the availability
+              of gender-affirming MediCaid in Maryland, you can (probably) find what you're looking for here. We hope you like it :)
+            </p>
+            <h3>Table of Contents</h3>
+            <ul>
+              <li><a href="#our-links">Our Links</a></li>
+              <li><a href="#data">About Our Data and Sources</a></li>
+              <li><a href="#stat-map">Static Maps</a></li>
+              <li><a href="#int-map">Interactive Map</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--End Intro-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text Only-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 id="our-links">Our Links</h2>
+            <hr>
+
+            <div class="flex-row">
+          <div class="flex-item flex-column">
+            <img class="image" src="img/user.png">
+          </div>
+          <div class="flex-item flex-column">
+            <p class="text text-large">
+              <a target="_blank" href="mailto:kyraliu@gmail.com">Kyra Liu</a>, kyraliu (at) gmail.com<br>
+              <a target="_blank" href="https://github.com/kyraliu1/">Kyra's GitHub</a><br>
+              <a target="_blank" href="https://www.linkedin.com/in/kliu136/">Kyra's LinkedIn</a><br>
+            </p>
+          </div>
+          <div class="flex-item flex-column">
+            <p class="text text-large">
+              <a target="_blank" href="mailto:ryanaswift7@gmail.com">Ryan Swift</a>, ryanaswift7 (at) gmail.com<br>
+              <a target="_blank" href="https://github.com/ryanaswift7/">Ryan's GitHub</a><br>
+              <a target="_blank" href="https://www.linkedin.com/in/ryan-swift-507a7325b/">Ryan's LinkedIn</a><br>
+            </p>
+          </div>
+
+          <!-------------------------------------------------------------------------------------------->
+          <!--Start Data-->
+          <div class="flex-row">
+            <div class="flex-item flex-column">
+              <h2 id="data">About Our Data and Sources</h2>
+              <hr>
+
+                <p class="text">
+                    The data used in this project was sourced from an incredible set of data compiled by
+                    <a target="_blank" href="https://www.thatnickpowersguy.com/">Nick Powers</a>. His work in collecting and
+                    processing such a massive set of data and making it completely free and accessible to everyone was
+                    instrumental to this project. We cannot express enough gratitude for the time, energy, and care he put into
+                    his data, and without it, none of this would have been possible.
+                </p>
+                <p class="text">
+                    For those interested, access to the entire dataset is available 
+                    <a target="_blank" href="https://www.thatnickpowersguy.com/blank-page">here</a>, and a spreadsheet containing
+                    all of the sources can be downloaded by clicking 
+                    <a target="_blank" href="https://www.thatnickpowersguy.com/_files/ugd/079347_44aae9463aca4cc693447cd31897944a.xlsx">here</a>.
+                    If you happen to appreciate the quality, accessibility, and transparency of Nick's data as much as we do,
+                    hop on over to <a target="_blank" href="https://www.thatnickpowersguy.com/">his website</a> and show him some love.
+                </p>
+
+            </div>
+          </div>
+
+
+          <!--End Data-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Adaptive Image-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 id="stat-map">Static Maps</h2>
+            <hr>
+            <p class="text">
+              We often find ourselves measuring costs in terms of work hours, so when we saw this data, we knew a burger-colored
+              choropleth map would really get the message across. In our tomato-colored states, we can buy over 350 big macs if we
+              work full-time at media-wage in that state. Fascinating to see this representation of prices across the country, isn't it? 
+
+            </p>
+            <a class="image adaptive-image" style="background-image: url('img/bigMacMap.png'); min-height: 500px;" href="img/bigMacMap.png" target="_blank"></a>
+            <hr>
+            <p class="text">
+              To take a look at median wages across the country, we thought it would be important to show how many hours of minimum-wage work it
+              would take to earn a month's worth of the median rent in that state. In the states with the darkest shade of orange, minimum-wage workers
+              would need to work over 150 hours. Take a look at the distribution, does it surprise you?  
+            </p>
+            <a class="image adaptive-image" style="background-image: url('img/rentWageHoursMap.png'); min-height: 500px;" href="img/rentWageHoursMap.png" target="_blank"></a>
+            <hr>
+            <p class="text">
+              While we're on the topic of income and wages, let's take a look at the differences between sexes in the U.S.. Here, we've shown the percent difference 
+              between the average income of men and the average income of women in each state. In the dark blue states, men make, on average, 30-35% more than women.
+            </p>
+            <a class="image adaptive-image" style="background-image: url('img/percentPayGapMap.png'); min-height: 600px;" href="img/percentPayGapMap.png" target="_blank"></a>
+
+          </div>
+        </div>
+        <!--End Text with Adaptive Image-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Iframe-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 id="int-map">Interactive Map</h2>
+            <hr>
+            <p class="text">
+              Okay, your turn to explore! We've divided up the data into categories, and you can feel free to mix and match
+              as many selections as you want from as many of the categories as you want. Make sure to click "update map"
+              every time you make changes to your selected data. Once you've updated the map, click on any of the 50 states
+              to view the selected data for that state. For those who would prefer to view the map on its original page,
+              you can find that <a target="_blank" href="https://kyraliu.shinyapps.io/statefacts/">here</a>.
+            </p>
+            <iframe class="iframe-in-body" src="https://kyraliu.shinyapps.io/statefacts/"></iframe>
+          </div>
+        </div>
+        <!--END Text with Iframe-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Credits-->
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <p class="text text-small text-italic add-top-margin-large">
+              Credits: <span class="highlight-text">Yen-Chia Hsu</span> for the <a target="_blank" 
+              href="https://github.com/yenchiah/project-website-template">website template</a>, the U.S.
+              Census for <a target="_blank" href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">
+              cartographic boundary files</a>, and <span class="highlight-text">Nick Powers</span> for the
+              <a target="_blank" href="https://www.thatnickpowersguy.com/blank-page">data set</a>.
+            </p>
+            <p class="text text-small text-italic">
+              We would also like to acknowledge the following R packages that were used in the development of this app: 
+                <ul class="text-small text-italic">
+                  <li>Terra (R. Hijmans):  spatial data processing</li>
+                  <li>Leaflet (V. Agafonkin): interactive mapping</li>
+                  <li>Maptiles (T. Giraud): accessing basemaps</li>
+                  <li>Tidyverse (Wickham et al.): data processing</li>
+                </ul>
+            </p>
+          </div>
+        </div>
+        <!--End Credits-->
+        <!-------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+    <div class="footer-container"></div>
+  </div>
+</body>
+
+</html>
